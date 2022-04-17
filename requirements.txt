@@ -1,0 +1,12 @@
+git+https://github.com/titipata/scipdf_parser
+numpy
+pandas
+bs4
+mxnet
+spacy
+nltk
+pytorch_transformers
+tensorboardX
+multiprocess
+pyrouge
+fairseq==0.10.0
