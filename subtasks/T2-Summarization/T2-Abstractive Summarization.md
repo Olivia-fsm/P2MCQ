@@ -18,9 +18,9 @@ We retrieved xxx HCI academic papers from arxiv and aligned each sentence in the
 
 #### Pretrained BARTSUM-HCI
 
-We finetune BART model on arxiv-HCI dataset for 3 epochs. The training process is shown as below.
+We finetune BART model on arxiv-HCI dataset for 6 epochs. The training process is shown as below.
 
-The pretrained checkpoint can be downloaded [here](https://drive.google.com/drive/folders/1B_fQGWLUwtneD5ifVBvSrFEJ9OIkP9jr?usp=sharing).
+The pretrained checkpoint can be downloaded [here](https://drive.google.com/drive/folders/1CjcI2S0N9jN5zQNWWnVHhr7rcxIDWvcO?usp=sharing).
 
 |  Step | Training Loss | Validation Loss |    Rouge1 |   Rouge2 |    Rougel | Rougelsum |   Gen Len |
 | ----: | ------------: | --------------: | --------: | -------: | --------: | --------: | --------: |

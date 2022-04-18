@@ -8,7 +8,7 @@ The implementation of this model based on the original codebase of **EMNLP 2019 
 
 ### Preprocessed Input Data
 
-A preprocessed input dataset for one of papers (XXX) used in interview is provided in (XXX) as an example. You can feel free to play with that :)
+A preprocessed input dataset for one of papers used in interview is provided [here](https://github.com/Olivia-fsm/P2MCQ/blob/master/subtasks/T1-SentenceSelection/sample_input_task1.txt) as an example. You can feel free to play with that :)
 
 ### Run on the Custom Dataset
 
