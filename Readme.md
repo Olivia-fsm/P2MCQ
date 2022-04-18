@@ -9,6 +9,15 @@ Codebase and pre-trained models for NAACL-2022 submission ***Towards Process-Ori
 The P2MCQ dataset archives 160 multiple-choice 307 questions with 629 question options in total (197 correct answers and 432 incorrect answers or distractors) from HCI-101 course. The dataset could be downloaded [here](https://drive.google.com/drive/folders/15UlOicIHAlU6akAJE6ngp2y_krKkpe1B?usp=sharing). 
 
 ## Data Preprocessing
+### Set up
+```
+# Suggested: create a virtual environment
+conda create -n p2mcq python=3.8
+conda activate p2mcq
+
+# Requirement
+pip install -r requirements.txt
+```
 ### Parsing PDF Document
 
 As for the PDF document preprocessing, we first use ***[scipdf-parser](https://github.com/titipata/scipdf_parser)*** to parse the PDF into sections in plain text format. 
