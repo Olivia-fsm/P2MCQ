@@ -8,7 +8,38 @@ Codebase and pre-trained models for NAACL-2022 submission ***Towards Process-Ori
 
 The P2MCQ dataset archives 160 multiple-choice 307 questions with 629 question options in total (197 correct answers and 432 incorrect answers or distractors) from HCI-101 course. The dataset could be downloaded [here](https://drive.google.com/drive/folders/15UlOicIHAlU6akAJE6ngp2y_krKkpe1B?usp=sharing). 
 
-## Modularized Automatic Edition
+## Data Preprocessing
+## Parsing PDF Document
+
+As for the PDF document preprocessing, we first use ***[scipdf-parser](https://github.com/titipata/scipdf_parser)*** to parse the PDF into sections in plain text format. 
+
+To keep the parser running, make sure the GROBID is running backend by executing the following commands in your command line before processing your custom data:
+
+```bash
+pip install git+https://github.com/titipata/scipdf_parser
+
+git clone https://github.com/titipata/scipdf_parser.git
+
+bash /scipdf_parser/serve_grobid.sh
+```
+
+You can process your own pdf-document with the code:
+
+```bash
+python /Data/preprocessing.py --pdf_path <path2pdf_doc> --save_path <path to save processed data> --save_format <save format, default as csv>
+```
+
+The `pdf_path` could be the path on your local file directory, or a public accessible link (e.g. `https://arxiv.org/pdf/1908.08345.pdf` )
+
+## Task1. Make input for Neural-based Sentence Selection
+
+We follow the extractive summarization methodology introduced by ([Liu and Lapata, 2019](https://arxiv.org/pdf/1908.08345.pdf)) to select salient sentences from the give paragraph.
+
+```bash
+python /Data/task1.py --input_path <path to input passages> --src_write_into <path to save processed input> --tgt_path <path to target summary (not required)> --tgt_write_into   <path to save processed target>
+```
+
+## Modularized Automatic Models
 
 We propose a list of on-the-shelf and fine-tuned models for the purpose of modularizing the end-to-end MCQ generation process. The subtasks include ***[T1-sentence selection]***; ***[T2-Abstractive Paragraph Summarization]***; ***[T3-Sentence Simplification]***; ***[T4-Paraphrasing]***; ***[T5-Negation Generation]***.   
 
@@ -25,4 +56,14 @@ We propose a list of on-the-shelf and fine-tuned models for the purpose of modul
 ## Evaluation
 
 The quality of the generated texts is evaluated with BLEU, ROUGE-1, ROUGE-2 and ROUGE-L scores. The references are supposed to be provided.
+
+
+#### Potential Pitfall
+
+1. If you see the following error message
+
+   >  oserror: libcublas.so.10: cannot open shared object file: no such file or directory
+
+   Check whether your `torch` and `cuda` version is compatible with your operating system. You can check your CUDA version by `nividia-smi`.
+
 
