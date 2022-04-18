@@ -12,13 +12,13 @@ The P2MCQ dataset archives 160 multiple-choice 307 questions with 629 question o
 
 We propose a list of on-the-shelf and fine-tuned models for the purpose of modularizing the end-to-end MCQ generation process. The subtasks include ***[T1-sentence selection]***; ***[T2-Abstractive Paragraph Summarization]***; ***[T3-Sentence Simplification]***; ***[T4-Paraphrasing]***; ***[T5-Negation Generation]***.   
 
-| task                                               | model & checkpoints                                          | Reference                                                    |
+| task                                               | Instruction                                          | Reference                                                    |
 | -------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Sentence Selection (i.e. extractive summarization) | [BertSUMEXT](https://drive.google.com/open?id=1kKWoV0QCbeIuFt85beQgJ4v0lujaXobJ) | The implementation of this model based on the original codebase released by Liu and Lapata |
-| Abstractive Summarization                          |                                                              |                                                              |
-| Sentence Simplification                            |                                                              |                                                              |
-| Paraphrasing                                       |                                                              |                                                              |
-| Negation                                           |                                                              |                                                              |
+| Sentence Selection (i.e. extractive summarization) | [BertSUMEXT](https://github.com/Olivia-fsm/P2MCQ/tree/master/subtasks/T1-SentenceSelection) | The implementation is based on the [original codebase](https://github.com/nlpyang/PreSumm) released by Liu and Lapata |
+| Abstractive Summarization                          | [BertSUMEXTABS](https://github.com/Olivia-fsm/P2MCQ/tree/master/subtasks/T2-Summarization)      [Bart-HCI](https://github.com/Olivia-fsm/P2MCQ/tree/master/subtasks/T2-Summarization)                                                       |                                                              |
+| Sentence Simplification                            | [ACCESS](https://github.com/Olivia-fsm/P2MCQ/tree/master/subtasks/T3-Simplification) [MUSS](https://github.com/Olivia-fsm/P2MCQ/tree/master/subtasks/T3-Simplification)                                                             |  The implementation is based on the original codebase([ACCESS](https://github.com/facebookresearch/access) [MUSS](https://github.com/facebookresearch/muss)) released by Martin et al.                                                            |
+| Paraphrasing                                       | [Bart-para-SCI](https://github.com/Olivia-fsm/P2MCQ/tree/master/subtasks/T4-Paraphrasing)                                                             |         Finetuned on [ParaSCI](https://github.com/dqxiu/ParaSCI) by Dong et al.                                                     |
+| Negation                                           | [CrossAUG](https://github.com/Olivia-fsm/P2MCQ/tree/master/subtasks/T5-Negation)                                                             |             The implementation is based on the [original codebase](https://github.com/minwhoo/CrossAug) released by Lee et al.                                                 |
 
 ---
 
