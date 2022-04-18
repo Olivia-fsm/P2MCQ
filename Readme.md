@@ -57,7 +57,7 @@ We propose a list of on-the-shelf and fine-tuned models for the purpose of modul
 
 The quality of the generated texts is evaluated with BLEU, ROUGE-1, ROUGE-2 and ROUGE-L scores. The references are supposed to be provided.
 ```
-python /evaluation.py --input_path <input_filepath (txt)> --pred_path <pred_filepath (txt)> --gold_path <gold_filepath (txt)>
+python ./evaluation.py --input_path <input_filepath (txt)> --pred_path <pred_filepath (txt)> --gold_path <gold_filepath (txt)>
 ```
 
 
