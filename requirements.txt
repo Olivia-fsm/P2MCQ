@@ -10,3 +10,5 @@ tensorboardX
 multiprocess
 pyrouge
 fairseq==0.10.0
+seaborn
+rouge_score
