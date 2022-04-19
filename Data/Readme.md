@@ -17,7 +17,7 @@ bash /scipdf_parser/serve_grobid.sh
 You can process your own pdf-document with the code:
 
 ```bash
-python /Data/preprocessing.py --pdf_path <path2pdf_doc> --save_path <path to save processed data> --save_format <save format, default as csv>
+python Data/preprocessing.py --pdf_path <path2pdf_doc> --save_path <path to save processed data> --save_format <save format, default as csv>
 ```
 
 The `pdf_path` could be the path on your local file directory, or a public accessible link (e.g. `https://arxiv.org/pdf/1908.08345.pdf` )

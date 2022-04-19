@@ -40,7 +40,7 @@ The pretrained checkpoint can be downloaded [here](https://drive.google.com/driv
 You can generated paragraph summarization with the domain-adapted BARTSUM-HCI model with following code:
 
 ```bash
-python /subtasks/T2-Summarization/task2_gen.py --model_path <model_path> --datapath <input_path (csv/pkl)> --output_path <output_path> --device cuda
+python subtasks/T2-Summarization/task2_gen.py --model_path <model_path> --datapath <input_path (csv/pkl)> --output_path <output_path> --device cuda
 ```
 
  If you want to print the input-summary pairs, you can set `--verbose True`.

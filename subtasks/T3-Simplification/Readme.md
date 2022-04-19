@@ -9,9 +9,9 @@ We applied ***AudienCe-CEntric Sentence Simplification (ACCESS)*** and ***Multil
 The pretrained model are released by Martin et. al in their original codebase. The sentence simplification experiment could be run by the following code:
 
 ```bash
-python /subtasks/T3-Simplification/access/scripts/generate.py < <path to source sentences> > <subtask3_output>
+python subtasks/T3-Simplification/access/scripts/generate.py < <path to source sentences> > <subtask3_output>
 
-python /subtasks/T3-Simplification/task3_gen.py --task3_out_path <subtask3_output> --output_path <output_path>
+python subtasks/T3-Simplification/task3_gen.py --task3_out_path <subtask3_output> --output_path <output_path>
 ```
 
 For ACCESS model, make sure to create the compatible environment following the instruction in ACCESS original repo:
@@ -38,7 +38,7 @@ conda create -n <new env name>
 The pretrained model are released by Martin et. al in their original codebase. The simplification experiment could be run by the following code:
 
 ```bash
-python /subtasks/T3-Simplification/muss/scripts/simplify.py <path to source sentences> --model-name muss_en_wikilarge_mined
+python subtasks/T3-Simplification/muss/scripts/simplify.py <path to source sentences> --model-name muss_en_wikilarge_mined
 ```
 
 #### Potential Pitfall
