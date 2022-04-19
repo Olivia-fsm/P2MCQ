@@ -15,7 +15,7 @@ A preprocessed input dataset for one of papers used in interview is provided [he
 Process your own dataset into the compatible input format of Task1 with:
 
 ```bash
-python /Data/task1.py --input_path <path to input passages> --src_write_into <path to save processed input> --tgt_path <path to target summary (not required)> --tgt_write_into   <path to save processed target>
+python Data/task1.py --input_path <path to input passages> --src_write_into <path to save processed input> --tgt_path <path to target summary (not required)> --tgt_write_into   <path to save processed target>
 ```
 
 ## Model & Experiment
@@ -23,7 +23,7 @@ python /Data/task1.py --input_path <path to input passages> --src_write_into <pa
 We apply the pretrained BERTSUMEXT model released by Liu and Lapata. The pretrained checkpoint could be downloaded [here](https://drive.google.com/open?id=1kKWoV0QCbeIuFt85beQgJ4v0lujaXobJ). Then run sentence selection experiment with:
 
 ```bash
-python /subtasks/T1-SentenceSelection/PreSumm/src/train.py -task ext -mode test_text -text_src <input file for task1> -test_batch_size 8 -log_file <log file path> -test_from <pretrained model ckpt> -sep_optim true -use_interval true -visible_gpus 0 -max_pos 512 -max_length 500 -alpha 0.95 -min_length 20 -result_path <output path>
+python subtasks/T1-SentenceSelection/PreSumm/src/train.py -task ext -mode test_text -text_src <input file for task1> -test_batch_size 8 -log_file <log file path> -test_from <pretrained model ckpt> -sep_optim true -use_interval true -visible_gpus 0 -max_pos 512 -max_length 500 -alpha 0.95 -min_length 20 -result_path <output path>
 ```
 
 

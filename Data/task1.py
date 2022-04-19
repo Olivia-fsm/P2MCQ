@@ -115,6 +115,8 @@ def make_presumm_input(psgs_list, input_write_into: str, trg_write_into=None, tr
 
 def read_context(input_path):
     input_format = input_path.split(".")[-1]
+    assert (input_format in ["csv", "pkl", "txt"]
+            ), "Please save the input file in csv/pkl/txt format! :)"
     if input_format == "csv":
         input_DF = pd.read_csv(input_path)[["SectionTitle", "Context"]]
         return input_DF['Context'].values
@@ -125,6 +127,7 @@ def read_context(input_path):
         with open(input_path, 'r')as trg:
             input_list = trg.readlines()
         return input_list
+
     return None
 
 
